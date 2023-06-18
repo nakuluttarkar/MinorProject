@@ -1,0 +1,18 @@
+{% load static %}
+{% for i in event %}
+
+
+<div class="card">
+    <div class="card-image">
+        <img src="/media/{{i.image}}" alt="Card Image 1">
+    </div>
+    <div class="card-content">
+        <h2 class="card-title">Card Title 1</h2>
+        <p class="card-description">{{i.title}}</p>
+        <div class="card-buttons">
+            <a href="{% url 'base:seemore' i.id %}" class="card-button card-button-see-more">See More</a>
+            <a href="#" class="card-button card-button-register">Register</a>
+        </div>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,22 @@
+{% load static %}
+
+
+
+{% for i in event %}
+<article class="products__card">
+    <div class="products__content">
+        <img src="/media/{{i.image}}" alt="" class="products__img">
+
+        <h3 class="products__title">GDSC</h3>
+        <span class="products__price">{{i.title}}</span>
+
+        <button class="button button--flex products__button">
+          See More
+        </button>
+
+        <!-- <button class="button button--flex products__button">
+            <i class="ri-shopping-bag-line button__icon"></i>
+        </button> -->
+    </div>
+</article>
+{% endfor %}

@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'base/css/form.css'%}">
+
+        <title>Responsive landing page headphones</title>
+    </head>
+    <body>
+    <main class="main">
+
+    <section class="discount section" id="create">
+          <h2 class="section__title">Create an Event</h2>
+          <h1 class="section__title section__title-gradient">Every. Details. Counts.</h1>
+
+<form class="" action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="discount__container container grid">
+      <div class="discount__animate">
+          <br><br><h2 class="discount__title">Event Name</h2><br>
+          <h2 class="discount__title">Event Description</h2><br>
+          <h2 class="discount__title">Event StartDate</h2><br>
+          <h2 class="discount__title">Event EndDate</h2><br>
+          <h2 class="discount__title">Event Venue</h2><br>
+          <h2 class="discount__title">Registration Link</h2><br>
+          <h2 class="discount__title">Upload the image link</h2><br>
+      </div>
+      <div>
+          {{form.title}}<br><br>
+          {{form.description}}<br><br>
+          {{form.start_date}}<br><br>
+          {{form.end_date}}<br><br>
+          {{form.location}}<br><br>
+          {{form.register_link}}<br><br>
+          {{form.image}}<br><br>
+      </div>
+      <button type="submit">Register</button>
+
+  </div>
+
+</form>
+
+</section>
+
+<footer class="footer section" id="foot">
+    <hr>
+    <div class="footer__container container grid">
+        <a href="#" class="footer__logo">
+            <img src="img/logo.png" alt="">
+        </a>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Contact Us</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">Facebook</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Instagram</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Support</h3>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#" class="footer__link">Help</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Register</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Updates</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Query</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <form action="" class="footer__form">
+                <input type="email" placeholder="Email" class="footer__input">
+                <button class="button button--flex">
+                    <i class="ri-send-plane-line button__icon"></i> Email Us
+                </button>
+            </form>
+
+            <div class="footer__social">
+                <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-twitter-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <p class="footer__copy">
+        <a href="https://www.youtube.com/c/Bedimcode/" target="_blank" class="footer__copy-link">&#169; Bedimcode. All right reserved</a>
+    </p>
+</footer>
+
+<!--=============== SCROLL UP ===============-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-s-line scrollup__icon"></i>
+</a>
+
+<!--=============== SCROLL REVEAL ===============-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'base/js/form.js'%}"></script>
+</main>
+</body>
+</html>
